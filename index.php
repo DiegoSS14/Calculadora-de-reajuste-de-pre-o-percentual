@@ -12,7 +12,7 @@
 
     <?php
     $valor = !empty($_GET['valor']) ? $_GET['valor'] : 0;
-    $aumento = !empty($_GET['aumento']) ? $_GET['aumento'] : 0;
+    $aumento = !empty($_GET['aumento']) ? $_GET['aumento'] : 50;
     $valorMaisAumento = $valor * $aumento / 100;
     $valorTotal = $valor + $valorMaisAumento;
 
@@ -43,6 +43,8 @@
     </div>
 
     <script>
+        mudaValor()
+
         function mudaValor() {
             p.innerText = aumento.value
         }
